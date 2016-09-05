@@ -1,0 +1,73 @@
+body {
+
+}
+
+#main {
+  width: 1350px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+}
+
+.mainCategory {
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+.tier_1 {
+  margin: 100px auto;
+  width: 530px;
+}
+
+.tier_1 div {
+  width: 150px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+.tier_1 :nth-child(2) {
+  margin: auto 30px;
+}
+
+.tier_2 {
+  margin: 100px auto;
+  width: 936px;
+}
+
+.tier_2 div {
+  width: 150px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 15px;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.tier_2 div :last-child {
+  margin-right: 0;
+}
+
+.tier_3 {
+  margin: 100px auto;
+  width: 1312px;
+}
+
+.tier_3 div {
+  width: 150px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 15px;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.tier_3 div :last-child {
+  margin-right: 0;
+}
