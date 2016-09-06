@@ -3,6 +3,7 @@ body {
 }
 
 #main {
+  position: relative;
   width: 1290px;
   margin: 0 auto;
 }
@@ -19,12 +20,12 @@ header {
   border-radius: 15px;
 }
 
-.tier_1 {
+#tier_1 {
   margin: 100px auto;
   width: 530px;
 }
 
-.tier_1 div {
+#tier_1 div {
   width: 150px;
   text-align: center;
   border: 2px solid black;
@@ -32,7 +33,7 @@ header {
   display: inline-block;
 }
 
-.tier_1 :nth-child(2) {
+#tier_1 :nth-child(2) {
   margin: auto 30px;
 }
 
@@ -70,4 +71,28 @@ header {
 
 .tier_3 div:last-child {
   margin-right: 0;
+}
+
+#tier_2-1 {
+  position: absolute;
+  left: 190px;
+  height: 63px;
+  width: 530px;
+  outline: 2px dotted black;
+}
+
+#tier_2-2 {
+  position: absolute;
+  left: 380px;
+  height: 63px;
+  width: 530px;
+  outline: 2px dotted black;
+}
+
+#tier_2-3 {
+  position: absolute;
+  left: 570px;
+  height: 63px;
+  width: 530px;
+  outline: 2px dotted black;
 }
