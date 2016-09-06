@@ -3,7 +3,7 @@ body {
 }
 
 #main {
-  width: 1350px;
+  width: 1290px;
   margin: 0 auto;
 }
 
@@ -38,7 +38,7 @@ header {
 
 .tier_2 {
   margin: 100px auto;
-  width: 936px;
+  width: 906px;
 }
 
 .tier_2 div {
@@ -50,13 +50,13 @@ header {
   margin-right: 30px;
 }
 
-.tier_2 div :last-child {
+.tier_2 div:last-child {
   margin-right: 0;
 }
 
 .tier_3 {
   margin: 100px auto;
-  width: 1312px;
+  width: 1282px;
 }
 
 .tier_3 div {
@@ -68,6 +68,6 @@ header {
   margin-right: 30px;
 }
 
-.tier_3 div :last-child {
+.tier_3 div:last-child {
   margin-right: 0;
 }
