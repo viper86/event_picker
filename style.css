@@ -25,6 +25,7 @@ body {
 /*main page*/
 
 #main {
+  position: relative;
   background-color: #494949;
   width: 1290px;
   margin: 30px auto;
@@ -101,12 +102,12 @@ button:first-child {
   border-radius: 15px;
 }
 
-.tier_1 {
+#tier_1 {
   margin: 100px auto;
   width: 530px;
 }
 
-.tier_1 div {
+#tier_1 div {
   width: 150px;
   text-align: center;
   border: 2px solid black;
@@ -114,7 +115,7 @@ button:first-child {
   display: inline-block;
 }
 
-.tier_1 :nth-child(2) {
+#tier_1 :nth-child(2) {
   margin: auto 30px;
 }
 
@@ -152,4 +153,28 @@ button:first-child {
 
 .tier_3 div:last-child {
   margin-right: 0;
+}
+
+#tier_2-1 {
+  position: absolute;
+  left: 190px;
+  height: 63px;
+  width: 530px;
+  outline: 2px dotted black;
+}
+
+#tier_2-2 {
+  position: absolute;
+  left: 380px;
+  height: 63px;
+  width: 530px;
+  outline: 2px dotted black;
+}
+
+#tier_2-3 {
+  position: absolute;
+  left: 570px;
+  height: 63px;
+  width: 530px;
+  outline: 2px dotted black;
 }
