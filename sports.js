@@ -1,6 +1,6 @@
 'use strict';
 
-var sportsArray = [['Basketball', 'Football', 'Baseball'], ['College', 'Semi-Pro', 'Pro']];
+var sportsArray = [['Basketball', 'Football', 'Baseball'], ['College', 'Semi-Pro', 'Pro'], ['Beavers', 'Ducks', 'Vikings']];
 
 
 var main = document.getElementById('main');
@@ -11,34 +11,126 @@ var oneThree = document.getElementById('1_3');
 
 oneOne.addEventListener('click', oneOneClickHandler);
 oneTwo.addEventListener('click', oneTwoClickHandler);
-// oneThree.addEventListener('click', oneThreeClickHandler);
+oneThree.addEventListener('click', oneThreeClickHandler);
+
+var clicked = false;
 
 function oneOneClickHandler() {
+  if (clicked === true) {
+    return;
+  } else {
   // creates containing div
-  var tierTwoOne = document.createElement('div');
-  tierTwoOne.id = 'tier_2-1';
-  main.appendChild(tierTwoOne);
+    var tierTwo = document.createElement('div');
+    tierTwo.id = 'tier_2-1';
+    main.appendChild(tierTwo);
 
   // creates individual divs
-  for (var i = 0; i < 3; i++) {
-    var subCatOne = document.createElement('div');
-    subCatOne.textContent = sportsArray[1][i];
-    tierTwoOne.classList.add('tier_2');
-    tierTwoOne.appendChild(subCatOne);
+    for (var i = 0; i < 3; i++) {
+      var subCatOne = document.createElement('div');
+      subCatOne.textContent = sportsArray[1][i];
+      tierTwo.classList.add('tier_2');
+      tierTwo.appendChild(subCatOne);
+      if (i === 0) {
+        subCatOne.onclick = function() {
+          subCatOne.addEventListener('click', testClickHandler1);
+          function testClickHandler1() {}
+          alert('test');
+        };
+      } else if (i === 1) {
+        subCatOne.onclick = function() {
+          subCatOne.addEventListener('click', testClickHandler2);
+          function testClickHandler2() {}
+          alert('test 2');
+        };
+      } else {
+        subCatOne.onclick = function() {
+          subCatOne.addEventListener('click', testClickHandler3);
+          function testClickHandler3() {}
+          alert('test 3');
+        };
+      }
+    }
+    clicked = true;
   }
 }
 
+
+
+
 function oneTwoClickHandler() {
+  if (clicked === true) {
+    return;
+  } else {
   // creates containing div
-  var tierTwoOne = document.createElement('div');
-  tierTwoOne.id = 'tier_2-2';
-  main.appendChild(tierTwoOne);
+    var tierTwo = document.createElement('div');
+    tierTwo.id = 'tier_2-2';
+    main.appendChild(tierTwo);
 
   // creates individual divs
-  for (var i = 0; i < 3; i++) {
-    var subCatOne = document.createElement('div');
-    subCatOne.textContent = sportsArray[1][i];
-    tierTwoOne.classList.add('tier_2');
-    tierTwoOne.appendChild(subCatOne);
+    for (var i = 0; i < 3; i++) {
+      var subCatOne = document.createElement('div');
+      subCatOne.textContent = sportsArray[1][i];
+      tierTwo.classList.add('tier_2');
+      tierTwo.appendChild(subCatOne);
+      if (i === 0) {
+        subCatOne.onclick = function() {
+          subCatOne.addEventListener('click', testClickHandler1);
+          function testClickHandler1() {}
+          alert('test');
+        };
+      } else if (i === 1) {
+        subCatOne.onclick = function() {
+          subCatOne.addEventListener('click', testClickHandler2);
+          function testClickHandler2() {}
+          alert('test 2');
+        };
+      } else {
+        subCatOne.onclick = function() {
+          subCatOne.addEventListener('click', testClickHandler3);
+          function testClickHandler3() {}
+          alert('test 3');
+        };
+      }
+    }
+    clicked = true;
+  }
+}
+
+function oneThreeClickHandler() {
+  if (clicked === true) {
+    return;
+  } else {
+  // creates containing div
+    var tierTwo = document.createElement('div');
+    tierTwo.id = 'tier_2-3';
+    main.appendChild(tierTwo);
+
+  // creates individual divs
+    for (var i = 0; i < 3; i++) {
+      var subCatOne = document.createElement('div');
+      subCatOne.textContent = sportsArray[1][i];
+      tierTwo.classList.add('tier_2');
+      tierTwo.appendChild(subCatOne);
+      if (i === 0) {
+        subCatOne.onclick = function() {
+          subCatOne.addEventListener('click', testClickHandler1);
+          function testClickHandler1() {}
+          alert('test');
+        };
+      } else if (i === 1) {
+        subCatOne.onclick = function() {
+          subCatOne.addEventListener('click', testClickHandler2);
+          function testClickHandler2() {}
+          alert('test 2');
+        };
+      } else {
+        subCatOne.onclick = function() {
+          subCatOne.addEventListener('click', testClickHandler3);
+          function testClickHandler3() {}
+          alert('test 3');
+        };
+      }
+    }
+    clicked = true;
   }
 }
