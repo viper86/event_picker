@@ -1,0 +1,119 @@
+#main {
+  position: relative;
+  /*background-color: #494949;*/
+  width: 1290px;
+  margin: 30px auto;
+}
+
+.mainCategory {
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+#tier_1 {
+  margin: 100px auto 0 auto;
+  width: 530px;
+}
+
+#tier_1 div {
+  width: 150px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+#tier_1 :nth-child(2) {
+  margin: auto 30px;
+}
+
+.tier_2 {
+  margin: 100px auto;
+  width: 906px;
+}
+
+.tier_2 div {
+  width: 150px;
+  font-size: 30px;
+  text-align: center;
+  padding: 10px 1px;
+  border: 2px solid black;
+  border-radius: 15px;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.tier_2 div:last-child {
+  margin-right: 0;
+}
+
+/*#tier_3 {
+  margin: 100px auto;
+  width: 530px;
+  height: 63px;
+  outline: 2px dotted black;
+  position: absolute;
+  left: 350px;
+  top: 495px;
+}*/
+
+.tier_3 div {
+  width: 150px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 15px;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.tier_3 div:last-child {
+  margin-right: 0;
+}
+
+#tier_2-1 {
+  position: absolute;
+  left: 190px;
+  height: 63px;
+  width: 530px;
+}
+
+#tier_2-2 {
+  position: absolute;
+  left: 380px;
+  height: 63px;
+  width: 530px;
+}
+
+#tier_2-3 {
+  position: absolute;
+  left: 570px;
+  height: 63px;
+  width: 530px;
+}
+
+#tier_3-1 {
+  position: absolute;
+  top: 590px;
+  height: 63px;
+  width: 530px;
+  outline: 2px dotted black;
+}
+
+#tier_3-2 {
+  position: absolute;
+  left: 190px;
+  top: 495px;
+  height: 63px;
+  width: 530px;
+}
+
+#tier_3-3 {
+  position: absolute;
+  left: 380px;
+  top: 495px;
+  height: 63px;
+  width: 530px;
+}
