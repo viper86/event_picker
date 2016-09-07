@@ -2,6 +2,8 @@
 @font-face {
   font-family: 'Sonsie One', cursive;
     src: url ("https://fonts.googleapis.com/css?family=Sonsie+One");
+  font-family: 'Oleo Script', cursive;
+    src: url ("https://fonts.googleapis.com/css?family=Oleo+Script");
 }
 
 body {
@@ -38,7 +40,7 @@ h1 {
 }
 
 h2, h3, h4, h5, h6 {
-  font-family: 'Sonsie One', cursive;
+  font-family: 'Oleo Script', cursive;
   color: #fff;
   margin-left: 30px;
   margin-bottom: 30px;
@@ -68,8 +70,8 @@ p {
 button {
   width: 400px;
   min-height: 50px;
-  font-family: 'Sonsie One', cursive;
-  font-size: 20px;
+  font-family: 'Oleo Script', cursive;
+  font-size: 28px;
   color: #fff;
   border-radius: 15px;
   margin-right: 20px;
