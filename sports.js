@@ -10,12 +10,15 @@ var sportsArray = [['Basketball', 'Football', 'Soccer'],
                    ['Victory', 'Stars'],                 // semi-pro soccer
                    ['Timbers', 'Thorns', 'Sounders']];   // pro soccer
 
+var storedArray = [];
+
 var main = document.getElementById('main');
 // var tierOne = document.getElementById('tier_1');
 var oneOne = document.getElementById('1_1');
 var oneTwo = document.getElementById('1_2');
 var oneThree = document.getElementById('1_3');
 
+// names refer to the tier and item in that tier
 oneOne.addEventListener('click', oneOneClickHandler);
 oneTwo.addEventListener('click', oneTwoClickHandler);
 oneThree.addEventListener('click', oneThreeClickHandler);
@@ -59,8 +62,16 @@ function oneOneClickHandler() {
 
             if (j === 0) {
               subCategory.onclick = function() {
-                localStorage.setItem('beavers', sportsArray[2][0]);
-              }
+                storedArray.push(sportsArray[2][0]);
+              };
+            } else if (j === 1) {
+              subCategory.onclick = function() {
+                storedArray.push(sportsArray[2][1]);
+              };
+            } else {
+              subCategory.onclick = function() {
+                storedArray.push(sportsArray[2][2]);
+              };
             }
           }
         };
@@ -77,6 +88,20 @@ function oneOneClickHandler() {
             subCategory.textContent = sportsArray[3][j];
             tierThree.classList.add('tier_3');
             tierThree.appendChild(subCategory);
+
+            if (j === 0) {
+              subCategory.onclick = function() {
+                storedArray.push(sportsArray[3][0]);
+              };
+            } else if (j === 1) {
+              subCategory.onclick = function() {
+                storedArray.push(sportsArray[3][1]);
+              };
+            } else {
+              subCategory.onclick = function() {
+                storedArray.push(sportsArray[3][2]);
+              };
+            }
           }
         };
 
@@ -92,6 +117,20 @@ function oneOneClickHandler() {
             subCategory.textContent = sportsArray[4][j];
             tierThree.classList.add('tier_3');
             tierThree.appendChild(subCategory);
+
+            if (j === 0) {
+              subCategory.onclick = function() {
+                storedArray.push(sportsArray[4][0]);
+              };
+            } else if (j === 1) {
+              subCategory.onclick = function() {
+                storedArray.push(sportsArray[4][1]);
+              };
+            } else {
+              subCategory.onclick = function() {
+                storedArray.push(sportsArray[4][2]);
+              };
+            }
           }
         };
       }
@@ -130,6 +169,20 @@ function oneTwoClickHandler() {
             subCategory.textContent = sportsArray[2][j];
             tierThree.classList.add('tier_3');
             tierThree.appendChild(subCategory);
+
+            if (j === 0) {
+              subCategory.onclick = function() {
+                storedArray.push(sportsArray[2][0]);
+              };
+            } else if (j === 1) {
+              subCategory.onclick = function() {
+                storedArray.push(sportsArray[2][1]);
+              };
+            } else {
+              subCategory.onclick = function() {
+                storedArray.push(sportsArray[2][2]);
+              };
+            }
           }
         };
 
@@ -145,6 +198,20 @@ function oneTwoClickHandler() {
             subCategory.textContent = sportsArray[5][j];
             tierThree.classList.add('tier_3');
             tierThree.appendChild(subCategory);
+
+            if (j === 0) {
+              subCategory.onclick = function() {
+                storedArray.push(sportsArray[5][0]);
+              };
+            } else if (j === 1) {
+              subCategory.onclick = function() {
+                storedArray.push(sportsArray[5][1]);
+              };
+            } else {
+              subCategory.onclick = function() {
+                storedArray.push(sportsArray[5][2]);
+              };
+            }
           }
         };
 
@@ -160,6 +227,20 @@ function oneTwoClickHandler() {
             subCategory.textContent = sportsArray[6][j];
             tierThree.classList.add('tier_3');
             tierThree.appendChild(subCategory);
+
+            if (j === 0) {
+              subCategory.onclick = function() {
+                storedArray.push(sportsArray[6][0]);
+              };
+            } else if (j === 1) {
+              subCategory.onclick = function() {
+                storedArray.push(sportsArray[6][1]);
+              };
+            } else {
+              subCategory.onclick = function() {
+                storedArray.push(sportsArray[6][2]);
+              };
+            }
           }
         };
       }
@@ -198,6 +279,20 @@ function oneThreeClickHandler() {
             subCategory.textContent = sportsArray[2][j];
             tierThree.classList.add('tier_3');
             tierThree.appendChild(subCategory);
+
+            if (j === 0) {
+              subCategory.onclick = function() {
+                storedArray.push(sportsArray[2][0]);
+              };
+            } else if (j === 1) {
+              subCategory.onclick = function() {
+                storedArray.push(sportsArray[2][1]);
+              };
+            } else {
+              subCategory.onclick = function() {
+                storedArray.push(sportsArray[2][2]);
+              };
+            }
           }
         };
 
@@ -213,6 +308,16 @@ function oneThreeClickHandler() {
             subCategory.textContent = sportsArray[7][j];
             tierThree.classList.add('tier_3');
             tierThree.appendChild(subCategory);
+
+            if (j === 0) {
+              subCategory.onclick = function() {
+                storedArray.push(sportsArray[7][0]);
+              };
+            } else {
+              subCategory.onclick = function() {
+                storedArray.push(sportsArray[7][1]);
+              };
+            }
           }
         };
 
@@ -228,6 +333,20 @@ function oneThreeClickHandler() {
             subCategory.textContent = sportsArray[8][j];
             tierThree.classList.add('tier_3');
             tierThree.appendChild(subCategory);
+
+            if (j === 0) {
+              subCategory.onclick = function() {
+                storedArray.push(sportsArray[8][0]);
+              };
+            } else if (j === 1) {
+              subCategory.onclick = function() {
+                storedArray.push(sportsArray[8][1]);
+              };
+            } else {
+              subCategory.onclick = function() {
+                storedArray.push(sportsArray[8][2]);
+              };
+            }
           }
         };
       }
@@ -235,3 +354,10 @@ function oneThreeClickHandler() {
     tierOneClicked = true;
   }
 }
+
+var results = document.getElementById('results');
+results.addEventListener('click', resultsHandler);
+function resultsHandler() {
+  var storeArray = JSON.stringify(storedArray);
+  localStorage.setItem('storedArray', storeArray);
+};
