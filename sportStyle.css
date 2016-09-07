@@ -50,7 +50,7 @@
   margin-right: 0;
 }
 
-/*#tier_3 {
+/*.tier_3 {
   margin: 100px auto;
   width: 530px;
   height: 63px;
@@ -62,7 +62,9 @@
 
 .tier_3 div {
   width: 150px;
+  font-size: 30px;
   text-align: center;
+  padding: 10px 1px;
   border: 2px solid black;
   border-radius: 15px;
   display: inline-block;
@@ -96,24 +98,49 @@
 
 #tier_3-1 {
   position: absolute;
-  top: 590px;
+  top: 392px;
   height: 63px;
   width: 530px;
-  outline: 2px dotted black;
+  /*outline: 2px dotted black;*/
+  margin-top: 100px;
 }
 
 #tier_3-2 {
   position: absolute;
   left: 190px;
-  top: 495px;
+  top: 392px;
   height: 63px;
   width: 530px;
+  /*outline: 2px dotted black;*/
+  margin-top: 100px;
 }
 
 #tier_3-3 {
   position: absolute;
   left: 380px;
-  top: 495px;
+  top: 392px;
   height: 63px;
   width: 530px;
+  /*outline: 2px dotted black;*/
+  margin-top: 100px;
+}
+
+#tier_3-4 {
+  position: absolute;
+  left: 570px;
+  top: 392px;
+  height: 63px;
+  width: 530px;
+  /*outline: 2px dotted black;*/
+  margin-top: 100px;
+}
+
+#tier_3-5 {
+  position: absolute;
+  left: 760px;
+  top: 392px;
+  height: 63px;
+  width: 530px;
+  /*outline: 2px dotted black;*/
+  margin-top: 100px;
 }
