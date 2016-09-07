@@ -4,10 +4,10 @@ var sportsArray = [['Basketball', 'Football', 'Soccer'],
                    ['College', 'Semi-Pro', 'Pro'],       // used for all 3 main categories
                    ['Beavers', 'Vikings', 'Ducks'],      // used for all college sports
                    ['Energy', 'Rainmakers', 'Chinooks'], // semi-pro basketball
-                   ['Blazers', 'Mystics'],               // pro basketball
+                   ['Blazers', 'Fire', 'Storm'],         // pro basketball
                    ['Raiders', 'Stallions', 'Boltz'],    // semi-pro football
                    ['Seahawks', 'Steel', 'Shockwave'],   // pro football
-                   ['Victory', 'Stars'],     // semi-pro soccer
+                   ['Victory', 'Stars'],                 // semi-pro soccer
                    ['Timbers', 'Thorns', 'Sounders']];   // pro soccer
 
 var main = document.getElementById('main');
@@ -21,12 +21,14 @@ oneTwo.addEventListener('click', oneTwoClickHandler);
 oneThree.addEventListener('click', oneThreeClickHandler);
 
 // used to short circuit click handlers once clicked
-var clicked = false;
+var tierOneClicked = false;
+// var tierTwoClicked = false;
+// var tierThreeClicked = false;
 
 // Baskbetball
 // click handler
 function oneOneClickHandler() {
-  if (clicked === true) {
+  if (tierOneClicked === true) {
     return;
   } else {
   // creates containing div
@@ -54,8 +56,13 @@ function oneOneClickHandler() {
             subCategory.textContent = sportsArray[2][j];
             tierThree.classList.add('tier_3');
             tierThree.appendChild(subCategory);
+
+            if (j === 0) {
+              subCategory.onclick = function() {
+                localStorage.setItem('beavers', sportsArray[2][0]);
+              }
+            }
           }
-          // var subCatTwo = document.createElement('div');
         };
 
       // Basketball --> Semi-Pro --- Index [3]
@@ -89,14 +96,14 @@ function oneOneClickHandler() {
         };
       }
     }
-    clicked = true;
+    tierOneClicked = true;
   }
 }
 
 // Football
 // click handler
 function oneTwoClickHandler() {
-  if (clicked === true) {
+  if (tierOneClicked === true) {
     return;
   } else {
   // creates containing div
@@ -157,14 +164,14 @@ function oneTwoClickHandler() {
         };
       }
     }
-    clicked = true;
+    tierOneClicked = true;
   }
 }
 
 // Soccer
 // click handler
 function oneThreeClickHandler() {
-  if (clicked === true) {
+  if (tierOneClicked === true) {
     return;
   } else {
   // creates containing div
@@ -225,6 +232,6 @@ function oneThreeClickHandler() {
         };
       }
     }
-    clicked = true;
+    tierOneClicked = true;
   }
 }
