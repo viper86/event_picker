@@ -21,8 +21,14 @@ var artsArray = [
     ['Ballet', 'Ethnic', 'Modern'], // performing -> dance -- tierThree (sub-array[10])
     ['Festivals', 'Independent', 'Foreign'] // performing-> films -- tierThree (sub-array[11])
 ];
+// sets the stored array to what is in local storage
+var storedArray = JSON.parse(localStorage.getItem('storedArray'));;
 
-var storedArray = [];
+// checks if something is in local storage
+// if null, sets storedArray equal to an empty array
+if (!storedArray) {
+  storedArray = [];
+}
 
 //Get div elements by id
 var main = document.getElementById('main');
@@ -369,9 +375,22 @@ function oneThreeClickHandler() {
   }
 }
 
+
 var results = document.getElementById('results');
 results.addEventListener('click', resultsHandler);
 function resultsHandler() {
+
   var storeArray = JSON.stringify(storedArray);
   localStorage.setItem('storedArray', storeArray);
+  // location.reload();
+
+}
+
+var newTree = document.getElementById('refresh');
+newTree.addEventListener('click', newTreeHandler);
+
+function newTreeHandler() {
+  var storeArray = JSON.stringify(storedArray);
+  localStorage.setItem('storedArray', storeArray);
+  location.reload();
 };
