@@ -2,35 +2,26 @@
 
 // set array variables, grouped by tier
 var artsArray = [
-// tierOne == visual, music, performing
-  // visual -- tierTwo
-  [['Galleries', 'Museums', 'Special Events'],
-    // visual -> galleries -- tierThree (sub-array[1])
-    ['Openings', 'Exhibitions', 'Gallery Walks'],
-    // visual -> museums -- tierThree (sub-array[2])
-    ['Events', 'Exhibitions', 'Classes'],
-    // visual -> specialEvents -- tierThree (sub-array[3])
-    ['Festivals', 'Workshops', 'Other Events'],
+// tierOne == visual arts, music, performing arts
+  // visual arts
+  ['Galleries', 'Museums', 'Special Events'], // visual -> -- tierTwo (sub-array[0])
+    ['Openings', 'Exhibitions', 'Gallery Walks'], // visual -> museums -- tierThree (sub-array[1])
+    ['Events', 'Exhibitions', 'Classes'], // visual -> specialEvents -- tierThree (sub-array[2])
+    ['Festivals', 'Workshops', 'Other Events'], // visual -> specialEvents -- tierThree (sub-array[3])
 
-  // music -- tierTwo
-  ['Live Bands', 'Clubs', 'Classical'],
-    // music -> liveBands -- tierThree (sub-array[4])
-    ['National Acts', 'Local Bands', 'Cover Bands'],
-    // music -> clubs -- tierThree (sub-array[5])
-    ['DJs', 'Theme Dance Nights', 'third'],
-    // music -> classical -- tierThree (sub-array[6])
-    ['Orchestral', 'Vocal', 'Chamber'],
+  // music
+  ['Live Bands', 'Clubs', 'Classical'], // music -- tierTwo (sub-array[4])
+    ['National Acts', 'Local Bands', 'Cover Bands'], // music -> liveBands -- tierThree (sub-array[5])
+    ['DJs', 'Theme Dance Nights', 'Line Dancing'], // music -> clubs -- tierThree (sub-array[6])
+    ['Orchestral', 'Vocal', 'Chamber'], // music -> classical -- tierThree (sub-array[7])
 
-  // performing -- tierTwo
-  ['Theater', 'Dance', 'Films']
-    // performing -> theater -- tierThree (sub-array[7])
-    ['Plays', 'Musicals', 'Performance Art'],
-    // performing -> dance -- tierThree (sub-array[8])
-    ['Ballet', 'Ethnic', 'Modern'],
-    // performing-> films -- tierThree (sub-array[9])
-    ['Festivals', 'Independent', 'Foreign'],
-  ]
+  // performing arts
+  ['Theater', 'Dance', 'Films'], // performing -> theater -- tierTwo (sub-array[8])
+    ['Plays', 'Musicals', 'Performance Art'], // performing -> theater -- tierThree (sub-array[9])
+    ['Ballet', 'Ethnic', 'Modern'], // performing -> dance -- tierThree (sub-array[10])
+    ['Festivals', 'Independent', 'Foreign'] // performing-> films -- tierThree (sub-array[11])
 ];
+
 var storedArray = [];
 
 //Get div elements by id
@@ -40,7 +31,7 @@ var oneOne   = document.getElementById('1_1');
 var oneTwo   = document.getElementById('1_2');
 var oneThree = document.getElementById('1_3');
 
-// add event listener for choosint catagories
+// add event listener for choosing catagories
 oneOne.addEventListener('click', oneOneClickHandler);
 oneTwo.addEventListener('click', oneTwoClickHandler);
 oneThree.addEventListener('click', oneThreeClickHandler);
@@ -50,33 +41,34 @@ var tierOneClicked = false;
 // var tierTwoClicked = false;
 // var tierThreeClicked = false;
 
-// Clickhandler functions
-// Visual arts
+
+// Visual Arts
+// click handler
 function oneOneClickHandler() {
   if (tierOneClicked === true) {
     return;
   } else {
-    // creates containing div
-    var tierTwoOne = document.createElement('div');
+  // creates containing div
+    var tierTwo = document.createElement('div');
     tierTwo.id = 'tier_2-1';
     main.appendChild(tierTwo);
 
-  // creates individual divs
-  for (var i = 0; i <artsArray[1].length; i++) {
-    var subCategory = document.createElement('div');
-    subCategory.textContent = artsArray[1][i];
-    tierTwo.classList.add('tier_2');
-    tierTwo.appendChild(subCategory);
+  // creates individual divs Index [0]
+    for (var i = 0; i < artsArray[0].length; i++) {
+      var subCategory = document.createElement('div');
+      subCategory.textContent = artsArray[0][i];
+      tierTwo.classList.add('tier_2');
+      tierTwo.appendChild(subCategory);
 
-      // Add onclick functions to subcategories
-      // visual art --> galleries --> sub-array [1]
+      // adds on click functions to the subcategories
+      // Visual Arts -> galleries --- Index [1]
       if (i === 0) {
         subCategory.onclick = function() {
           var tierThree = document.createElement('div');
-          tierThree.id = 'tier_3_1';
+          tierThree.id = 'tier_3-1';
           main.appendChild(tierThree);
 
-          for (var j = 0; j < artsArray[2].length; j++) {
+          for (var j = 0; j < artsArray[1].length; j++) {
             var subCategory = document.createElement('div');
             subCategory.textContent = artsArray[1][j];
             tierThree.classList.add('tier_3');
@@ -98,22 +90,22 @@ function oneOneClickHandler() {
           }
         };
 
-      // visual art --> museums -- sub-array [2]
-      } else if (i = 1) {
+      // Visual Arts -> Museums --- Index [2]
+      } else if (i === 1) {
         subCategory.onclick = function() {
-          var tierThree = document.createElement('div')
-          tierThree.id = 'tier_3_2'
+          var tierThree = document.createElement('div');
+          tierThree.id = 'tier_3-2';
           main.appendChild(tierThree);
 
-          for (var j = 0; j < artsArray[2].length, j++) {
+          for (var j = 0; j < artsArray[2].length; j++) {
             var subCategory = document.createElement('div');
             subCategory.textContent = artsArray[2][j];
-            tierThree.classList.add('tier_3');
+            tierThree.classList.add('tier_2');
             tierThree.appendChild(subCategory);
 
             if (j === 0) {
               subCategory.onclick = function() {
-                storedArray.push(artsArray[3][0]);
+                storedArray.push(artsArray[2][0]);
               };
             } else if (j === 1) {
               subCategory.onclick = function() {
@@ -127,11 +119,11 @@ function oneOneClickHandler() {
           }
         };
 
-      // visual art --> special events -- sub-array [3]
+      // Visual Arts -> Special Events --- Index [3]
       } else {
         subCategory.onclick = function() {
           var tierThree = document.createElement('div');
-          tierThree.id = 'tier_3_3';
+          tierThree.id = 'tier_3-3';
           main.appendChild(tierThree);
 
           for (var j = 0; j < artsArray[3].length; j++) {
@@ -140,59 +132,53 @@ function oneOneClickHandler() {
             tierThree.classList.add('tier_3');
             tierThree.appendChild(subCategory);
 
-            for (var j = 0; j < artsArray[3].length; j++) {
-              var subCategory = document.createElement('div');
-              subCategory.textContent = artsArray[3][j];
-              tierThree.classList.add('tier_3');
-              tierThree.appendChild(subCategory);
-
-              if (j === 0) {
-                subCategory.onclick = function() {
-                  storedArray.push(artsArray[3][0]);
-                };
-              } else if (j === 1) {
-                subCategory.onclick = function() {
-                  storedArray.push(artsArray[3][1]);
-                };
-              } else {
-                subCategory.onclick = function() {
-                  storedArray.push(artsArray[3][2]);
-                };
-              }
+            if (j === 0) {
+              subCategory.onclick = function() {
+                storedArray.push(artsArray[3][0]);
+              };
+            } else if (j === 1) {
+              subCategory.onclick = function() {
+                storedArray.push(artsArray[3][1]);
+              };
+            } else {
+              subCategory.onclick = function() {
+                storedArray.push(artsArray[3][2]);
+              };
             }
-          };
-        }
+          }
+        };
       }
+    }
     tierOneClicked = true;
   }
 }
 
-
-// music
+// Music
+// click handler
 function oneTwoClickHandler() {
   if (tierOneClicked === true) {
     return;
   } else {
-    // containing div
-    var tierTwoOne = document.createElement('div');
+  // creates containing div
+    var tierTwo = document.createElement('div');
     tierTwo.id = 'tier_2-2';
     main.appendChild(tierTwo);
 
-    // individual divs
+  // Music individual div  - Index [4]
     for (var i = 0; i < 3; i++) {
       var subCategory = document.createElement('div');
       subCategory.textContent = artsArray[4][i];
-      tierTwoOne.classList.add('tier_2');
-      tierTwoOne.appendChild(subCategory);
+      tierTwo.classList.add('tier_2');
+      tierTwo.appendChild(subCategory);
 
-      // music --> live bands -- sub-array [4]
+      // Music --> Live --- Index [5]
       if (i === 0) {
         subCategory.onclick = function() {
           var tierThree = document.createElement('div');
           tierThree.id = 'tier_3-2';
           main.appendChild(tierThree);
 
-          for (var j = 0; j < artsArray[4].length; j++) {
+          for (var j = 0; j < artsArray[5].length; j++) {
             var subCategory = document.createElement('div');
             subCategory.textContent = artsArray[4][j];
             tierThree.classList.add('tier_3');
@@ -214,41 +200,11 @@ function oneTwoClickHandler() {
           }
         };
 
-        // music --> clubs --- sub-array [5]
-        } else if (i === 1) {
-          subCategory.onclick = function() {
-            var tierThree = document.createElement('div');
-            tierThree.id = 'tier_3-3';
-            main.appendChild(tierThree);
-
-            for (var j = 0; j < artsArray[5].length; j++) {
-              var subCategory = document.createElement('div');
-              subCategory.textContent = artsArray[5][j];
-              tierThree.classList.add('tier_3');
-              tierThree.appendChild(subCategory);
-
-              if (j === 0) {
-                subCategory.onclick = function() {
-                  storedArray.push(artsArray[5][0]);
-                };
-              } else if (j === 1) {
-                subCategory.onclick = function() {
-                  storedArray.push(artsArray[5][1]);
-                };
-              } else {
-                subCategory.onclick = function() {
-                  storedArray.push(artsArray[5][2]);
-                };
-              }
-            }
-          };
-
-
-      // music --> classical -- sub-array [6]
-      } else {
+      // Music --> Clubs --- Index [6]
+      } else if (i === 1) {
         subCategory.onclick = function() {
           var tierThree = document.createElement('div');
-          tierThree.id = 'tier_3-4';
+          tierThree.id = 'tier_3-3';
           main.appendChild(tierThree);
 
           for (var j = 0; j < artsArray[6].length; j++) {
@@ -272,34 +228,12 @@ function oneTwoClickHandler() {
             }
           }
         };
-      }
-    }
-    tierOneClicked = true;
-  }
-}
 
-// performing arts
-function oneThreeClickHandler() {
-  if (tierOneClicked === true) {
-    return;
-  } else {
-  // containing div
-    var tierTwo = document.createElement('div');
-    tierTwo.id = 'tier_2-3';
-    main.appendChild(tierTwo);
-
-  // individual divs
-    for (var i = 0; i < 3; i++) {
-      var subCategory = document.createElement('div');
-      subCategory.textContent = artsArray[1][i];
-      tierTwo.classList.add('tier_2');
-      tierTwo.appendChild(subCategory);
-
-      // performing arts --> theater -- sub-array [7]
-      if (i === 0) {
+      // Music --> Classical --- Index [7]
+      } else {
         subCategory.onclick = function() {
           var tierThree = document.createElement('div');
-          tierThree.id = 'tier_3-3';
+          tierThree.id = 'tier_3-4';
           main.appendChild(tierThree);
 
           for (var j = 0; j < artsArray[7].length; j++) {
@@ -323,41 +257,35 @@ function oneThreeClickHandler() {
             }
           }
         };
+      }
+    }
+    tierOneClicked = true;
+  }
+}
 
-        // performing arts --> dance --- sub-array [8]
-        } else if (i === 1) {
-          subCategory.onclick = function() {
-            var tierThree = document.createElement('div');
-            tierThree.id = 'tier_3-4';
-            main.appendChild(tierThree);
+// Perfoming Arts
+// click handler
+function oneThreeClickHandler() {
+  if (tierOneClicked === true) {
+    return;
+  } else {
+// creates containing div
+    var tierTwo = document.createElement('div');
+    tierTwo.id = 'tier_2-3';
+    main.appendChild(tierTwo);
 
-            for (var j = 0; j < artsArray[8].length; j++) {
-              var subCategory = document.createElement('div');
-              subCategory.textContent = artsArray[8][j];
-              tierThree.classList.add('tier_3');
-              tierThree.appendChild(subCategory);
+  // Perfoming Arts div --- Index [8]
+    for (var i = 0; i < 3; i++) {
+      var subCategory = document.createElement('div');
+      subCategory.textContent = artsArray[1][i];
+      tierTwo.classList.add('tier_2');
+      tierTwo.appendChild(subCategory);
 
-              if (j === 0) {
-                subCategory.onclick = function() {
-                  storedArray.push(artsArray[8][0]);
-                };
-              } else if {
-                subCategory.onclick = function() {
-                  storedArray.push(artsArray[8][1]);
-                };
-              } else {
-                subCategory.onclick = function() {
-                  storedArray.push(artsArray[8][2]);
-                };
-              }
-            }
-          };
-
-      // performing arts --> film -- sub-array [9]
-      } else {
+      // Perfoming Arts --> Theater --- Index [9]
+      if (i === 0) {
         subCategory.onclick = function() {
           var tierThree = document.createElement('div');
-          tierThree.id = 'tier_3-5';
+          tierThree.id = 'tier_3-3';
           main.appendChild(tierThree);
 
           for (var j = 0; j < artsArray[9].length; j++) {
@@ -381,16 +309,69 @@ function oneThreeClickHandler() {
             }
           }
         };
+
+      // Perfoming Arts --> Dance --- Index [10]
+      } else if (i === 1) {
+        subCategory.onclick = function() {
+          var tierThree = document.createElement('div');
+          tierThree.id = 'tier_3-4';
+          main.appendChild(tierThree);
+
+          for (var j = 0; j < artsArray[10].length; j++) {
+            var subCategory = document.createElement('div');
+            subCategory.textContent = artsArray[10][j];
+            tierThree.classList.add('tier_3');
+            tierThree.appendChild(subCategory);
+
+            if (j === 0) {
+              subCategory.onclick = function() {
+                storedArray.push(artsArray[10][0]);
+              };
+            } else {
+              subCategory.onclick = function() {
+                storedArray.push(artsArray[10][1]);
+              };
+            }
+          }
+        };
+
+      // Perfoming Arts --> Films --- Index [11]
+      } else {
+        subCategory.onclick = function() {
+          var tierThree = document.createElement('div');
+          tierThree.id = 'tier_3-5';
+          main.appendChild(tierThree);
+
+          for (var j = 0; j < artsArray[11].length; j++) {
+            var subCategory = document.createElement('div');
+            subCategory.textContent = artsArray[11][j];
+            tierThree.classList.add('tier_3');
+            tierThree.appendChild(subCategory);
+
+            if (j === 0) {
+              subCategory.onclick = function() {
+                storedArray.push(artsArray[11][0]);
+              };
+            } else if (j === 1) {
+              subCategory.onclick = function() {
+                storedArray.push(artsArray[11][1]);
+              };
+            } else {
+              subCategory.onclick = function() {
+                storedArray.push(artsArray[11][2]);
+              };
+            }
+          }
+        };
       }
     }
     tierOneClicked = true;
   }
 }
 
-
 var results = document.getElementById('results');
 results.addEventListener('click', resultsHandler);
 function resultsHandler() {
-  var storedArtsArray = JSON.stringify(storedArray);
-  localStorage.setItem('storedArray', storedArtsArray);
+  var storeArray = JSON.stringify(storedArray);
+  localStorage.setItem('storedArray', storeArray);
 };
