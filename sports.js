@@ -355,9 +355,21 @@ function oneThreeClickHandler() {
   }
 }
 
+
+
 var results = document.getElementById('results');
 results.addEventListener('click', resultsHandler);
 function resultsHandler() {
   var storeArray = JSON.stringify(storedArray);
   localStorage.setItem('storedArray', storeArray);
+};
+
+var newTree = document.getElementById('refresh');
+newTree.addEventListener('click', newTreeHandler);
+
+function newTreeHandler() {
+  var storeArray = JSON.stringify(storedArray);
+  localStorage.setItem('storedArray', storeArray);
+  location.reload();
+  var array = JSON.parse(localStorage.getItem('storedArray'));
 };
