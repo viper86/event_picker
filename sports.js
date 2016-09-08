@@ -10,10 +10,10 @@ var sportsArray = [['Basketball', 'Football', 'Soccer'],
                    ['Victory', 'Stars'],                 // semi-pro soccer
                    ['Timbers', 'Thorns', 'Sounders']];   // pro soccer
 
+// used for local storage
 var storedArray = [];
 
 var main = document.getElementById('main');
-// var tierOne = document.getElementById('tier_1');
 var oneOne = document.getElementById('1_1');
 var oneTwo = document.getElementById('1_2');
 var oneThree = document.getElementById('1_3');
@@ -39,7 +39,7 @@ function oneOneClickHandler() {
     tierTwo.id = 'tier_2-1';
     main.appendChild(tierTwo);
 
-  // creates individual divs
+  // creates individual divs/categories
     for (var i = 0; i < sportsArray[1].length; i++) {
       var subCategory = document.createElement('div');
       subCategory.textContent = sportsArray[1][i];
