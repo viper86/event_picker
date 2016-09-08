@@ -371,5 +371,5 @@ function newTreeHandler() {
   var storeArray = JSON.stringify(storedArray);
   localStorage.setItem('storedArray', storeArray);
   location.reload();
-  var array = JSON.parse(localStorage.getItem('storedArray'));
+  JSON.parse(localStorage.getItem('storedArray'));
 };
