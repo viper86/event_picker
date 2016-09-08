@@ -1,6 +1,69 @@
 @font-face {
   font-family: 'Permanent Marker', cursive;
     src: url ("https://fonts.googleapis.com/css?family=Permanent+Marker");
-  font-family: 'Courgette', cursive;
-    src: url("https://fonts.googleapis.com/css?family=Courgette");
+}
+
+
+body {
+  background-color: #aaa;
+  margin: auto;
+}
+
+/*header*/
+header {
+  width: 100%;
+  height: 200px;
+  color: #494949;
+  background-color: #ffa700;
+  margin-top: 0px;
+  padding-left: 100px;
+}
+
+#app-name {
+  font-size: 60pt;
+  padding-top: 2  0px;
+  margin-bottom: 10px;
+  padding-left: 175px;
+}
+
+#tagline {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 42pt;
+  padding-left: 225px;
+  margin-top: -30px;
+  color: #494949;
+
+}
+
+/*main page*/
+
+#main {
+  position: relative;
+  background-color: #494949;
+  width: 1290px;
+  margin: auto;
+  padding-top: 50px;
+}
+
+/*text settings*/
+
+h1 {
+  font-family: 'Permanent Marker', cursive;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: "Helvetica", "Verdana", "Open Sans", san-serif;
+  font-weight: bold;
+  font-style: italic;
+  color: #fff;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
 }
