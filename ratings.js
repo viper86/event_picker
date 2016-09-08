@@ -18,4 +18,6 @@ function submitRating() {
     avgRating = (Math.round(avgRating * 2) / 2).toFixed(1);
     console.log('Average Rating:', avgRating);
   }
+  var averageRating = document.getElementById('avg_rating');
+  averageRating.textContent = 'Average Rating: ' + avgRating;
 }
