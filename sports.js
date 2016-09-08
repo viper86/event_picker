@@ -10,8 +10,14 @@ var sportsArray = [['Basketball', 'Football', 'Soccer'],
                    ['Victory', 'Stars'],                 // semi-pro soccer
                    ['Timbers', 'Thorns', 'Sounders']];   // pro soccer
 
-// used for local storage
-var storedArray = [];
+// sets the stored array to what is in local storage
+var storedArray = JSON.parse(localStorage.getItem('storedArray'));;
+
+// checks if something is in local storage
+// if null, sets storedArray equal to an empty array
+if (!storedArray) {
+  storedArray = [];
+}
 
 var main = document.getElementById('main');
 var oneOne = document.getElementById('1_1');
@@ -355,9 +361,22 @@ function oneThreeClickHandler() {
   }
 }
 
+
 var results = document.getElementById('results');
 results.addEventListener('click', resultsHandler);
 function resultsHandler() {
+
   var storeArray = JSON.stringify(storedArray);
   localStorage.setItem('storedArray', storeArray);
+  // location.reload();
+
+}
+
+var newTree = document.getElementById('refresh');
+newTree.addEventListener('click', newTreeHandler);
+
+function newTreeHandler() {
+  var storeArray = JSON.stringify(storedArray);
+  localStorage.setItem('storedArray', storeArray);
+  location.reload();
 };
