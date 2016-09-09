@@ -21,6 +21,7 @@ var artsArray = [
     ['Ballet', 'Ethnic', 'Modern'], // performing -> dance -- tierThree (sub-array[10])
     ['Festivals', 'Independent', 'Foreign'] // performing-> films -- tierThree (sub-array[11])
 ];
+
 // sets the stored array to what is in local storage
 var storedArray = JSON.parse(localStorage.getItem('storedArray'));;
 
@@ -62,8 +63,10 @@ function oneOneClickHandler() {
   // creates individual divs Index [0]
     for (var i = 0; i < artsArray[0].length; i++) {
       var subCategory = document.createElement('div');
-      subCategory.textContent = artsArray[0][i];
+      var h3 = document.createElement('h3'); // add this line
+      h3.textContent = artsArray[0][i];
       tierTwo.classList.add('tier_2');
+      subCategory.appendChild(h3); // add this line
       tierTwo.appendChild(subCategory);
 
       // adds on click functions to the subcategories
@@ -76,8 +79,10 @@ function oneOneClickHandler() {
 
           for (var j = 0; j < artsArray[1].length; j++) {
             var subCategory = document.createElement('div');
-            subCategory.textContent = artsArray[1][j];
+            var h3 = document.createElement('h3'); // add this line
+            h3.textContent = artsArray[1][j];
             tierThree.classList.add('tier_3');
+            subCategory.appendChild(h3); // add this line
             tierThree.appendChild(subCategory);
 
             if (j === 0) {
@@ -105,8 +110,10 @@ function oneOneClickHandler() {
 
           for (var j = 0; j < artsArray[2].length; j++) {
             var subCategory = document.createElement('div');
-            subCategory.textContent = artsArray[2][j];
+            var h3 = document.createElement('h3'); // add this line
+            h3.textContent = artsArray[2][j];
             tierThree.classList.add('tier_2');
+            subCategory.appendChild(h3); // add this line
             tierThree.appendChild(subCategory);
 
             if (j === 0) {
@@ -134,8 +141,10 @@ function oneOneClickHandler() {
 
           for (var j = 0; j < artsArray[3].length; j++) {
             var subCategory = document.createElement('div');
-            subCategory.textContent = artsArray[3][j];
+            var h3 = document.createElement('h3'); // add this line
+            h3.textContent = artsArray[3][j];
             tierThree.classList.add('tier_3');
+            subCategory.appendChild(h3); // add this line
             tierThree.appendChild(subCategory);
 
             if (j === 0) {
@@ -173,8 +182,10 @@ function oneTwoClickHandler() {
   // Music individual div  - Index [4]
     for (var i = 0; i < 3; i++) {
       var subCategory = document.createElement('div');
-      subCategory.textContent = artsArray[4][i];
+      var h3 = document.createElement('h3'); // add this line
+      h3.textContent = artsArray[4][i];
       tierTwo.classList.add('tier_2');
+      subCategory.appendChild(h3); // add this line
       tierTwo.appendChild(subCategory);
 
       // Music --> Live --- Index [5]
@@ -186,8 +197,10 @@ function oneTwoClickHandler() {
 
           for (var j = 0; j < artsArray[5].length; j++) {
             var subCategory = document.createElement('div');
-            subCategory.textContent = artsArray[4][j];
+            var h3 = document.createElement('h3'); // add this line
+            h3.textContent = artsArray[4][j];
             tierThree.classList.add('tier_3');
+            subCategory.appendChild(h3); // add this line
             tierThree.appendChild(subCategory);
 
             if (j === 0) {
@@ -215,8 +228,10 @@ function oneTwoClickHandler() {
 
           for (var j = 0; j < artsArray[6].length; j++) {
             var subCategory = document.createElement('div');
-            subCategory.textContent = artsArray[6][j];
+            var h3 = document.createElement('h3'); // add this line
+            h3.textContent = artsArray[6][j];
             tierThree.classList.add('tier_3');
+            subCategory.appendChild(h3); // add this line
             tierThree.appendChild(subCategory);
 
             if (j === 0) {
@@ -244,8 +259,10 @@ function oneTwoClickHandler() {
 
           for (var j = 0; j < artsArray[7].length; j++) {
             var subCategory = document.createElement('div');
-            subCategory.textContent = artsArray[7][j];
+            var h3 = document.createElement('h3'); // add this line
+            h33.textContent = artsArray[7][j];
             tierThree.classList.add('tier_3');
+            subCategory.appendChild(h3); // add this line
             tierThree.appendChild(subCategory);
 
             if (j === 0) {
@@ -283,8 +300,10 @@ function oneThreeClickHandler() {
   // Perfoming Arts div --- Index [8]
     for (var i = 0; i < 3; i++) {
       var subCategory = document.createElement('div');
-      subCategory.textContent = artsArray[1][i];
+      var h3 = document.createElement('h3'); // add this line
+      h3.textContent = artsArray[1][i];
       tierTwo.classList.add('tier_2');
+      subCategory.appendChild(h3); // add this line
       tierTwo.appendChild(subCategory);
 
       // Perfoming Arts --> Theater --- Index [9]
@@ -296,8 +315,10 @@ function oneThreeClickHandler() {
 
           for (var j = 0; j < artsArray[9].length; j++) {
             var subCategory = document.createElement('div');
-            subCategory.textContent = artsArray[9][j];
+            var h3 = document.createElement('h3'); // add this line
+            h3.textContent = artsArray[9][j];
             tierThree.classList.add('tier_3');
+            subCategory.appendChild(h3); // add this line
             tierThree.appendChild(subCategory);
 
             if (j === 0) {
@@ -325,8 +346,10 @@ function oneThreeClickHandler() {
 
           for (var j = 0; j < artsArray[10].length; j++) {
             var subCategory = document.createElement('div');
-            subCategory.textContent = artsArray[10][j];
+            var h3 = document.createElement('h3'); // add this line
+            h3.textContent = artsArray[10][j];
             tierThree.classList.add('tier_3');
+            subCategory.appendChild(h3); // add this line
             tierThree.appendChild(subCategory);
 
             if (j === 0) {
@@ -350,8 +373,10 @@ function oneThreeClickHandler() {
 
           for (var j = 0; j < artsArray[11].length; j++) {
             var subCategory = document.createElement('div');
-            subCategory.textContent = artsArray[11][j];
+            var h3 = document.createElement('h3'); // add this line
+            h3.textContent = artsArray[11][j];
             tierThree.classList.add('tier_3');
+            subCategory.appendChild(h3); // add this line
             tierThree.appendChild(subCategory);
 
             if (j === 0) {
