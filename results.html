@@ -2,37 +2,53 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="results.css">
-    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Roboto" rel="stylesheet">
-    <title>your results</title>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Permanent+Marker" rel="stylesheet">
+    <title>Your Event Results</title>
   </head>
 
   <body>
-    <div class="image">
-      <img src="img/arrow.jpg" width=300 height=800>
+
+    <div id="header">
+      <div class="logo">
+        <h1>Venture!</h2>
+          <p>Get Out There</p>
+      </div>
+
+      <div class="nav">
+        <ul>
+          <li><a href="#">Sports</a></li>
+          <li><a href="#">Cultural</a></li>
+          <li><a href="#">Education</a></li>
+        </ul>
+      </div>
     </div>
 
     <main id="main">
-      <header>
-          <h1>venture!</h2>
-            <p>get out there</p>
-      </header>
 
       <div class="summary">
-        <h2>based on your choices, we've found a few events you might be interested in</h2>
-          <p>if you see something you like, simply click on the event link to add it to your own personalized event calendar</p>
+        <h2>Based on your choices, we've found a few events you might be interested in!</h2>
+          <p>If you see something you like, simply click on the event link to add it to your own personalized event list.</p>
+        <div id="list">
+          <!--Generated from JS-->
+        </div>
       </div>
 
-      <div id="list"></div>
+      <div class="rate">
+        <h2>Let us know what you think!</h2>
 
-      <!-- <div class="rating">
-        <h3>how did we do? feedback is important, so take a moment to rate the events we generated on a scale of 1-5</h3>
-        <div class="stars">
-          <img src="images/">
-          <img src="images/">
-          <img src="images/">
-          <img src="images/">
-          <img src="images/">
-        <div> -->
+        <form id="rating">
+          <label for="rating">Rate This List From 1 and 5:</label>
+          <input type="number" name="rating" step="1" min="1" max="5" required>
+          <button type="submit" name="submit_button">Rate!</button>
+        </form>
+
+        <div id="avg_rating">
+
+        </div>
+      </div>
+
+      <div id="footer">
+      <p>&copy; Copyright Venture! 2016</p>
       </div>
 
     </main>
