@@ -185,3 +185,16 @@ button {
   border: 2px solid black;
   border-radius: 15px;
 }
+
+#clear {
+  border: 2px solid black;
+  /*display: inline-block;*/
+  width: 100px;
+  margin: 0 auto;
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px 15px;
+  background-color: #4cab7c;
+  border-radius: 15px;
+}

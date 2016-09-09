@@ -39,3 +39,11 @@ function submitRating() {
   var averageRating = document.getElementById('avg_rating');
   averageRating.textContent = 'Average Rating: ' + avgRating;
 }
+
+var clear = document.getElementById('clear');
+clear.addEventListener('click', clearList);
+
+function clearList() {
+  localStorage.clear();
+  location.reload();
+}
