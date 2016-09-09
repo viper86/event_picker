@@ -64,9 +64,11 @@ function oneOneClickHandler() {
 
 //Create individual divs by looping through learningArray
     for (var i = 0; i < learningArray[0].length; i++) {
-      var subCategory = document.createElement('div')
-      subCategory.textContent = learningArray[0][i];
+      var subCategory = document.createElement('div');
+      var h3 = document.createElement('h3');
+      h3.textContent = learningArray[0][i];
       tierTwo.classList.add ('tier_2');
+      subCategory.appendChild(h3);
       tierTwo.appendChild(subCategory);
 
     // Add onclick functions to subcategories
@@ -78,9 +80,11 @@ function oneOneClickHandler() {
           main.appendChild(tierThree);
 
           for (var j = 0; j < learningArray[1].length; j++) {
-            var subCategory = document.createElement('div')
-            subCategory.textContent = learningArray[1][j];
+            var subCategory = document.createElement('div');
+            var h3 = document.createElement('h3');
+            h3.textContent = learningArray[1][j];
             tierThree.classList.add('tier_3');
+            subCategory.appendChild(h3);
             tierThree.appendChild(subCategory);
 
             if (j === 0) {
@@ -103,9 +107,11 @@ function oneOneClickHandler() {
           main.appendChild(tierThree);
 
           for (var j = 0; j < learningArray[2].length; j++) {
-            var subCategory = document.createElement('div')
-            subCategory.textContent = learningArray[2][j];
+            var subCategory = document.createElement('div');
+            var h3 = document.createElement('h3');
+            h3.textContent = learningArray[2][j];
             tierThree.classList.add('tier_3');
+            subCategory.appendChild(h3);
             tierThree.appendChild(subCategory);
 
             if (j === 0) {
@@ -129,8 +135,10 @@ function oneOneClickHandler() {
 
           for (var j = 0; j < learningArray[3].length; j++) {
             var subCategory = document.createElement('div');
-            subCategory.textContent = learningArray[3][j];
+            var h3 = document.createElement('h3');
+            h3.textContent = learningArray[3][j];
             tierThree.classList.add('tier_3');
+            subCategory.appendChild(h3);
             tierThree.appendChild(subCategory);
 
             if (j === 0) {
@@ -164,8 +172,10 @@ function oneTwoClickHandler() {
 // Create individual divs by looping through learningArray
     for (var i = 0; i < 2; i++) {
       var subCategory = document.createElement('div');
-      subCategory.textContent = learningArray[4][i];
+      var h3 = document.createElement('h3');
+      h3.textContent = learningArray[4][i];
       tierTwo.classList.add('tier_2');
+      subCategory.appendChild(h3);
       tierTwo.appendChild(subCategory);
 
   // Add onclick functions to subcategories
@@ -178,8 +188,10 @@ function oneTwoClickHandler() {
 
           for (var j = 0; j < learningArray[5].length; j++) {
             var subCategory = document.createElement('div');
-            subCategory.textContent = learningArray[5][j];
+            var h3 = document.createElement('h3');
+            h3.textContent = learningArray[5][j];
             tierThree.classList.add('tier_3');
+            subCategory.appendChild(h3);
             tierThree.appendChild(subCategory);
 
             if (j === 0) {
@@ -202,9 +214,11 @@ function oneTwoClickHandler() {
           main.appendChild(tierThree);
 
           for (var j = 0; j < learningArray[6].length; j++) {
-            var subCategory = document.createElement('div')
-            subCategory.textContent = learningArray[6][j];
+            var subCategory = document.createElement('div');
+            var h3 = document.createElement('h3');
+            h3.textContent = learningArray[6][j];
             tierThree.classList.add('tier_3');
+            subCategory.appendChild(h3);
             tierThree.appendChild(subCategory);
 
             if (j === 0) {
@@ -238,8 +252,10 @@ function oneThreeClickHandler() {
     // Create individual divs by looping through learningArray
         for (var i = 0; i < 2; i++) {
           var subCategory = document.createElement('div');
-          subCategory.textContent = learningArray[4][i];
+          var h3 = document.createElement('h3');
+          h3.textContent = learningArray[4][i];
           tierTwo.classList.add('tier_2');
+          subCategory.appendChild(h3);
           tierTwo.appendChild(subCategory);
 
       // Add onclick functions to subcategories
@@ -252,8 +268,10 @@ function oneThreeClickHandler() {
 
               for (var j = 0; j < learningArray[7].length; j++) {
                 var subCategory = document.createElement('div');
-                subCategory.textContent = learningArray[7][j];
+                var h3 = document.createElement('h3');
+                h3.textContent = learningArray[7][j];
                 tierThree.classList.add('tier_3');
+                subCategory.appendChild(h3);
                 tierThree.appendChild(subCategory);
 
                 if (j === 0) {
@@ -276,9 +294,11 @@ function oneThreeClickHandler() {
               main.appendChild(tierThree);
 
               for (var j = 0; j < learningArray[8].length; j++) {
-                var subCategory = document.createElement('div')
-                subCategory.textContent = learningArray[8][j];
+                var subCategory = document.createElement('div');
+                var h3 = document.createElement('h3');
+                h3.textContent = learningArray[8][j];
                 tierThree.classList.add('tier_3');
+                subCategory.appendChild(h3);
                 tierThree.appendChild(subCategory);
 
                 if (j === 0) {
