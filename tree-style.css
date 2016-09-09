@@ -12,43 +12,67 @@ body {
 /*header*/
 header {
   width: 100%;
-  height: 200px;
+  height: 175px;
   color: #494949;
   background-color: #ffa700;
-  margin-top: 0px;
+  margin-top: -50px;
   padding-left: 100px;
+  box-shadow:  2px 2px 2px 0px rgba(0, 0, 0, 0.4);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  -webkit-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.4);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    2px 2px 2px 0px rgba(0, 0, 0, 0.4);  /* Firefox 3.5 - 3.6 */
 }
 
 #app-name {
   font-size: 60pt;
   padding-top: 2  0px;
   margin-bottom: 10px;
-  padding-left: 175px;
+  padding-left: 150px;
+  color: #444;
+  text-shadow: 2px 2px 5px rgba(170, 170, 170, 0.6);
 }
 
 #tagline {
   font-family: 'Permanent Marker', cursive;
-  font-size: 42pt;
-  padding-left: 225px;
+  font-size: 28pt;
+  padding-left: 500px;
   margin-top: -30px;
   color: #494949;
-
+  text-shadow: 2px 2px 5px rgba(170, 170, 170, 0.6);
 }
 
 /*main page*/
 
 #main {
-  position: relative;
   background-color: #494949;
-  width: 1290px;
+  width: 90%;
+  max-width: 1200px;
+  height: 1200px;
   margin: auto;
   padding-top: 50px;
 }
+
+#mainCategory{
+  padding-left: 50px;
+}
+
+#bottom-buttons {
+  background-color: #494949;
+  width: 90%;
+  max-width: 1200px;
+  height: 200px;
+  margin: auto;
+  padding-top: 50px;
+  display: inline-block;
+}
+
 
 /*text settings*/
 
 h1 {
   font-family: 'Permanent Marker', cursive;
+  color: #fff;
+  padding-left: 75px;
+  padding-top: 10px;
 }
 
 h2, h3, h4, h5, h6 {
@@ -56,14 +80,180 @@ h2, h3, h4, h5, h6 {
   font-weight: bold;
   font-style: italic;
   color: #fff;
-  margin-left: 30px;
-  margin-bottom: 30px;
 }
 
 h2 {
   font-size: 30px;
+  padding-left: 100px;
 }
 
 h3 {
   font-size: 24px;
+}
+
+/* tree styling */
+mainCategory {
+  display: inline-block;
+  margin-left: 100px;
+  text-align: center;
+  font-family: "Helvetica", "Verdana", "Open Sans", san-serif;
+  font-weight: bold;
+  color: #fff;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+#tier_1 {
+  width: 900px;
+  margin: 100px auto 0 auto;
+}
+
+#tier_1 div {
+  width: 250px;
+  text-align: center;
+  font-family: "Helvetica", "Verdana", "Open Sans", san-serif;
+  font-weight: bold;
+  color: #fff;
+  border: 2px solid black;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+#tier_1 :nth-child(2) {
+  margin: auto 30px;
+}
+
+.tier_2 {
+  width: 900px;
+  margin: 100px auto 0 auto;
+}
+
+.tier_2 div {
+  width: 250px;
+  font-style: italic;
+  color: #fff;
+  text-align: center;
+  padding: 10px 1px;
+  border: 2px solid black;
+  border-radius: 15px;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.tier_2 div:last-child {
+  margin-right: 0;
+}
+
+.tier_3 {
+  width: 900px;
+  margin: 100px auto 0 auto;
+}
+
+.tier_3 div {
+  width: 250px;
+  text-align: center;
+  padding: 10px 1px;
+  border: 2px solid black;
+  border-radius: 15px;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.tier_3 div:last-child {
+  margin-right: 0;
+}
+
+#tier_2-1 {
+  /*top: 296px;
+  left: 190px;*/
+  width: 250px;
+  height: 50px;
+}
+
+#tier_2-2 {
+  /*top: 296px;
+  left: 380px;*/
+  width: 250px;
+  height: 50px;
+}
+
+#tier_2-3 {
+  /*position: absolute;*/
+  /*top: 296px;
+  left: 570px;*/
+  width: 250px;
+  height: 50px;
+}
+
+#tier_3-1 {
+  /*position: absolute;*/
+  /*top: 449px;*/
+  width: 250px;
+  height: 50px;
+  /*outline: 2px dotted black;*/
+  margin-top: 50px;
+}
+
+#tier_3-2 {
+  /*position: absolute;*/
+  /*left: 190px;
+  top: 449px; */
+  width: 250px;
+  height: 50px;
+  /*outline: 2px dotted black;*/
+  margin-top: 50px;
+}
+
+#tier_3-3 {
+  /*position: absolute;*/
+  /*left: 380px;
+  top: 449px;*/
+  width: 250px;
+  height: 50px;
+  /*outline: 2px dotted black;*/
+  margin-top: 50px;
+}
+
+#tier_3-4 {
+  /*position: absolute;*/
+  /*left: 570px;
+  top: 449px;*/
+  width: 250px;
+  height: 50px;
+  /*outline: 2px dotted black;*/
+  margin-top: 50px;
+}
+
+#tier_3-5 {
+  /*position: absolute;*/
+  /*left: 760px;
+  top: 449px;*/
+  width: 250px;
+  height: 50px;
+  /*outline: 2px dotted black;*/
+  margin-top: 50px;
+}
+
+#results {
+  /*position: absolute;*/
+  width: 250px;
+  height: 50px;
+
+}
+
+#refresh {
+  /*position: absolute;*/
+  width: 109.7px;
+  border: 2px solid black;
+  padding: 10px 15px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 10px 15px;
+  border-radius: 15px;
 }
