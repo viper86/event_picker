@@ -48,8 +48,10 @@ function oneOneClickHandler() {
   // creates individual divs/categories
     for (var i = 0; i < sportsArray[1].length; i++) {
       var subCategory = document.createElement('div');
-      subCategory.textContent = sportsArray[1][i];
+      var h3 = document.createElement('h3'); // add this line
+      h3.textContent = sportsArray[1][i]; // change subCategory to h3
       tierTwo.classList.add('tier_2');
+      subCategory.appendChild(h3); // add this line
       tierTwo.appendChild(subCategory);
 
       // adds on click functions to the subcategories
@@ -62,8 +64,10 @@ function oneOneClickHandler() {
 
           for (var j = 0; j < sportsArray[2].length; j++) {
             var subCategory = document.createElement('div');
-            subCategory.textContent = sportsArray[2][j];
+            var h3 = document.createElement('h3');
+            h3.textContent = sportsArray[2][j];
             tierThree.classList.add('tier_3');
+            subCategory.appendChild(h3);
             tierThree.appendChild(subCategory);
 
             if (j === 0) {
@@ -91,8 +95,10 @@ function oneOneClickHandler() {
 
           for (var j = 0; j < sportsArray[3].length; j++) {
             var subCategory = document.createElement('div');
-            subCategory.textContent = sportsArray[3][j];
+            var h3 = document.createElement('h3');
+            h3.textContent = sportsArray[3][j];
             tierThree.classList.add('tier_3');
+            subCategory.appendChild(h3);
             tierThree.appendChild(subCategory);
 
             if (j === 0) {
@@ -120,8 +126,10 @@ function oneOneClickHandler() {
 
           for (var j = 0; j < sportsArray[4].length; j++) {
             var subCategory = document.createElement('div');
-            subCategory.textContent = sportsArray[4][j];
+            var h3 = document.createElement('h3');
+            h3.textContent = sportsArray[4][j];
             tierThree.classList.add('tier_3');
+            subCategory.appendChild(h3);
             tierThree.appendChild(subCategory);
 
             if (j === 0) {
@@ -159,8 +167,10 @@ function oneTwoClickHandler() {
   // creates individual divs
     for (var i = 0; i < 3; i++) {
       var subCategory = document.createElement('div');
-      subCategory.textContent = sportsArray[1][i];
+      var h3 = document.createElement('h3');
+      h3.textContent = sportsArray[1][i];
       tierTwo.classList.add('tier_2');
+      subCategory.appendChild(h3);
       tierTwo.appendChild(subCategory);
 
       // Football --> College --- Index [2]
@@ -172,8 +182,10 @@ function oneTwoClickHandler() {
 
           for (var j = 0; j < sportsArray[2].length; j++) {
             var subCategory = document.createElement('div');
-            subCategory.textContent = sportsArray[2][j];
+            var h3 = document.createElement('h3');
+            h3.textContent = sportsArray[2][j];
             tierThree.classList.add('tier_3');
+            subCategory.appendChild(h3);
             tierThree.appendChild(subCategory);
 
             if (j === 0) {
@@ -201,8 +213,10 @@ function oneTwoClickHandler() {
 
           for (var j = 0; j < sportsArray[5].length; j++) {
             var subCategory = document.createElement('div');
-            subCategory.textContent = sportsArray[5][j];
+            var h3 = document.createElement('h3');
+            h3.textContent = sportsArray[5][j];
             tierThree.classList.add('tier_3');
+            subCategory.appendChild(h3);
             tierThree.appendChild(subCategory);
 
             if (j === 0) {
@@ -230,8 +244,10 @@ function oneTwoClickHandler() {
 
           for (var j = 0; j < sportsArray[6].length; j++) {
             var subCategory = document.createElement('div');
-            subCategory.textContent = sportsArray[6][j];
+            var h3 = document.createElement('h3');
+            h3.textContent = sportsArray[6][j];
             tierThree.classList.add('tier_3');
+            subCategory.appendChild(h3);
             tierThree.appendChild(subCategory);
 
             if (j === 0) {
@@ -269,8 +285,10 @@ function oneThreeClickHandler() {
   // creates individual divs
     for (var i = 0; i < 3; i++) {
       var subCategory = document.createElement('div');
-      subCategory.textContent = sportsArray[1][i];
+      var h3 = document.createElement('h3');
+      h3.textContent = sportsArray[1][i];
       tierTwo.classList.add('tier_2');
+      subCategory.appendChild(h3);
       tierTwo.appendChild(subCategory);
 
       // Soccer --> College --- Index [2]
@@ -282,8 +300,10 @@ function oneThreeClickHandler() {
 
           for (var j = 0; j < sportsArray[2].length; j++) {
             var subCategory = document.createElement('div');
-            subCategory.textContent = sportsArray[2][j];
+            var h3 = document.createElement('h3');
+            h3.textContent = sportsArray[2][j];
             tierThree.classList.add('tier_3');
+            subCategory.appendChild(h3);
             tierThree.appendChild(subCategory);
 
             if (j === 0) {
@@ -311,8 +331,10 @@ function oneThreeClickHandler() {
 
           for (var j = 0; j < sportsArray[7].length; j++) {
             var subCategory = document.createElement('div');
-            subCategory.textContent = sportsArray[7][j];
+            var h3 = document.createElement('h3');
+            h3.textContent = sportsArray[7][j];
             tierThree.classList.add('tier_3');
+            subCategory.appendChild(h3);
             tierThree.appendChild(subCategory);
 
             if (j === 0) {
@@ -336,8 +358,10 @@ function oneThreeClickHandler() {
 
           for (var j = 0; j < sportsArray[8].length; j++) {
             var subCategory = document.createElement('div');
-            subCategory.textContent = sportsArray[8][j];
+            var h3 = document.createElement('h3');
+            h3.textContent = sportsArray[8][j];
             tierThree.classList.add('tier_3');
+            subCategory.appendChild(h3);
             tierThree.appendChild(subCategory);
 
             if (j === 0) {

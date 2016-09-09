@@ -40,7 +40,6 @@
   width: 150px;
   font-size: 30px;
   text-align: center;
-  padding: 10px 1px;
   border: 2px solid black;
   border-radius: 15px;
   display: inline-block;
@@ -51,21 +50,10 @@
   margin-right: 0;
 }
 
-/*.tier_3 {
-  margin: 100px auto;
-  width: 530px;
-  height: 63px;
-  outline: 2px dotted black;
-  position: absolute;
-  left: 350px;
-  top: 495px;
-}*/
-
 .tier_3 div {
   width: 150px;
   font-size: 30px;
   text-align: center;
-  padding: 10px 1px;
   border: 2px solid black;
   border-radius: 15px;
   display: inline-block;
@@ -173,4 +161,8 @@ a {
   border: 2px solid black;
   padding: 10px 15px;
   border-radius: 15px;
+}
+
+h3 {
+  font-size: 24px;
 }
