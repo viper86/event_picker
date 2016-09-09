@@ -1,7 +1,7 @@
 'use strict';
 
 // Create multidimensional array for categories chosen, grouped by tier
-var learningArray = [
+var learningArray =
 // tierOne = presentations/skill development/connect with others
   // presentations --> tierTwo
   [['academic', 'political', 'motivational'],
@@ -12,19 +12,28 @@ var learningArray = [
   // presentations --> motivational --> tierThree
   ['famous', 'grassroots'],
 
-  // education --> tierTwo
+  // skill development --> tierTwo
   ['personal', 'professional'],
-  // education --> personal --> tierThree
+  // skill development --> personal --> tierThree
   ['classes', 'one-on-one'],
-  // education --> professional --> tierThree
+  // skill development --> professional --> tierThree
   ['workshops', 'job fairs'],
 
-  // connect with others --> tierTwo (= education --> tierTwo)
+  // connect with others --> tierTwo (= skill dev. --> tierTwo)
   // connect with others --> personal --> tierThree
   ['shared interests', 'casual socializing'],
   // connect with others --> professional --> tierThree
-  ['networking', 'job search']];
+  ['networking', 'job search']
 ];
+
+// Set storedArray to what is in local storage
+var storedArray = JSON.parse(localStorage.getItem('storedArray'));;
+
+// Check if information is in local storage
+// If null, sets storedArray equal to empty array
+if (!storedArray) {
+  storedArray = [];
+}
 
 // Get div elements by id
 var main     = document.getElementById('main');
@@ -42,7 +51,7 @@ var tierOneClicked   = false;
 // var tierTwoClicked   = false;
 // var tierThreeClicked = false;
 
-// Create three clickHandler functions to populate elements for subCatOne
+// Create three clickHandler functions to populate elements for tierTwo
 // presentations
 function oneOneClickHandler() {
   if (tierOneClicked === true) {
@@ -50,22 +59,47 @@ function oneOneClickHandler() {
   } else {
   // Create containing div
     var tierTwo = document.createElement('div');
-    tierTwo.id = 'tier_2-1'
+    tierTwo.id = 'tier_2_1'
     main.appendChild(tierTwo);
 
 //Create individual divs by looping through learningArray
-    for (var i = 0; i < learningArray[1].length; i++) {
+    for (var i = 0; i < learningArray[0].length; i++) {
       var subCategory = document.createElement('div')
-      subCategory.textContent = learningArray[1][i];
+      subCategory.textContent = learningArray[0][i];
       tierTwo.classList.add ('tier_2');
       tierTwo.appendChild(subCategory);
 
-      // Add onclick functions to subcategories
+    // Add onclick functions to subcategories
       // presentations --> academic -->
       if (i === 0) {
         subCategory.onclick = function() {
           var tierThree = document.createElement('div');
           tierThree.id = 'tier_3_1';
+          main.appendChild(tierThree);
+
+          for (var j = 0; j < learningArray[1].length; j++) {
+            var subCategory = document.createElement('div')
+            subCategory.textContent = learningArray[1][j];
+            tierThree.classList.add('tier_3');
+            tierThree.appendChild(subCategory);
+
+            if (j === 0) {
+              subCategory.onclick = function() {
+                storedArray.push(learningArray[1][0]);
+              };
+            } else {
+              subCategory.onclick = function() {
+                storedArray.push(learningArray[1][1]);
+              };
+            }
+          }
+        };
+
+      // presentations --> political -->
+      } else if (i === 1) {
+        subCategory.onclick = function() {
+          var tierThree = document.createElement('div');
+          tierThree.id = 'tier_3_2';
           main.appendChild(tierThree);
 
           for (var j = 0; j < learningArray[2].length; j++) {
@@ -76,24 +110,13 @@ function oneOneClickHandler() {
 
             if (j === 0) {
               subCategory.onclick = function() {
-                localStorage.setItem('', learningArray[][])
-        }
-      }
-    }
-  };
-
-      // presentations --> political -->
-      } else if (i === 1) {
-        subCategory.onclick. = function () {
-          var tierThree = document.createElement('div')
-          tierThree.id = 'tier_3_2'
-          main.appendChild(tierThree);
-
-          for (var j = 0; j <learningArray[3].length, j++) {
-            var subCategory = document.createElement('div');
-            subCategory.textContent = learningArray[3][j];
-            tierThree.classList.add('tier_3');
-            tierThree.appendChild(subCategory);
+                storedArray.push(learningArray[2][0]);
+              };
+            } else {
+              subCategory.onclick = function() {
+                storedArray.push(learningArray[2][1]);
+              };
+            }
           }
         };
 
@@ -104,11 +127,21 @@ function oneOneClickHandler() {
           tierThree.id = 'tier_3_3';
           main.appendChild(tierThree);
 
-          for (var j = 0; j < learningArray[4].length; j++) {
+          for (var j = 0; j < learningArray[3].length; j++) {
             var subCategory = document.createElement('div');
-            subCategory.textContent = learningArray[4][j];
+            subCategory.textContent = learningArray[3][j];
             tierThree.classList.add('tier_3');
             tierThree.appendChild(subCategory);
+
+            if (j === 0) {
+              subCategory.onclick = function() {
+                storedArray.push(learningArray[3][0]);
+              };
+            } else {
+              subCategory.onclick = function() {
+                subCategory.push(learningArray[3][1]);
+              };
+            }
           }
         };
       }
@@ -116,3 +149,170 @@ function oneOneClickHandler() {
     tierOneClicked = true;
   }
 }
+
+// Create three clickHandler functions to populate elements for tierTwo
+// skill development
+function oneTwoClickHandler() {
+  if (tierOneClicked === true) {
+    return;
+  } else {
+// Create containing div
+    var tierTwo = document.createElement('div');
+    tierTwo.id = 'tier_2_2';
+    main.appendChild(tierTwo);
+
+// Create individual divs by looping through learningArray
+    for (var i = 0; i < 2; i++) {
+      var subCategory = document.createElement('div');
+      subCategory.textContent = learningArray[4][i];
+      tierTwo.classList.add('tier_2');
+      tierTwo.appendChild(subCategory);
+
+  // Add onclick functions to subcategories
+      // skill development --> personal -->
+      if (i === 0) {
+        subCategory.onclick = function() {
+          var tierThree = document.createElement('div');
+          tierThree.id = 'tier_3_2';
+          main.appendChild(tierThree);
+
+          for (var j = 0; j < learningArray[5].length; j++) {
+            var subCategory = document.createElement('div');
+            subCategory.textContent = learningArray[5][j];
+            tierThree.classList.add('tier_3');
+            tierThree.appendChild(subCategory);
+
+            if (j === 0) {
+              subCategory.onclick = function() {
+                storedArray.push(learningArray[5][0]);
+              };
+            } else {
+              subCategory.onclick = function() {
+                storedArray.push(learningArray[5][1]);
+              };
+            }
+          }
+        };
+
+      // skill development --> professional -->
+      } else if (i === 1) {
+        subCategory.onclick = function() {
+          var tierThree = document.createElement('div');
+          tierThree.id = 'tier_3_2';
+          main.appendChild(tierThree);
+
+          for (var j = 0; j < learningArray[6].length; j++) {
+            var subCategory = document.createElement('div')
+            subCategory.textContent = learningArray[6][j];
+            tierThree.classList.add('tier_3');
+            tierThree.appendChild(subCategory);
+
+            if (j === 0) {
+              subCategory.onclick = function() {
+                storedArray.push(learningArray[6][0]);
+              };
+            } else {
+              subCategory.onclick = function() {
+                storedArray.push(learningArray[6][1]);
+              };
+            }
+          }
+        };
+      }
+    }
+    tierOneClicked = true;
+  }
+}
+
+// Create three clickHandler functions to populate elements for tierTwo
+// connect with others
+function oneThreeClickHandler() {
+  if (tierOneClicked === true) {
+    return;
+  } else {
+// Create containing div
+    var tierTwo = document.createElement('div');
+    tierTwo.id = 'tier_2-3';
+    main.appendChild(tierTwo);
+
+    // Create individual divs by looping through learningArray
+        for (var i = 0; i < 2; i++) {
+          var subCategory = document.createElement('div');
+          subCategory.textContent = learningArray[4][i];
+          tierTwo.classList.add('tier_2');
+          tierTwo.appendChild(subCategory);
+
+      // Add onclick functions to subcategories
+          // connect with others --> personal -->
+          if (i === 0) {
+            subCategory.onclick = function() {
+              var tierThree = document.createElement('div');
+              tierThree.id = 'tier_3_2';
+              main.appendChild(tierThree);
+
+              for (var j = 0; j < learningArray[7].length; j++) {
+                var subCategory = document.createElement('div');
+                subCategory.textContent = learningArray[7][j];
+                tierThree.classList.add('tier_3');
+                tierThree.appendChild(subCategory);
+
+                if (j === 0) {
+                  subCategory.onclick = function() {
+                    storedArray.push(learningArray[7][0]);
+                  };
+                } else {
+                  subCategory.onclick = function() {
+                    storedArray.push(learningArray[7][1]);
+                  };
+                }
+              }
+            };
+
+          // skill development --> professional -->
+          } else if (i === 1) {
+            subCategory.onclick = function() {
+              var tierThree = document.createElement('div');
+              tierThree.id = 'tier_3_2';
+              main.appendChild(tierThree);
+
+              for (var j = 0; j < learningArray[8].length; j++) {
+                var subCategory = document.createElement('div')
+                subCategory.textContent = learningArray[8][j];
+                tierThree.classList.add('tier_3');
+                tierThree.appendChild(subCategory);
+
+                if (j === 0) {
+                  subCategory.onclick = function() {
+                    storedArray.push(learningArray[8][0]);
+                  };
+                } else {
+                  subCategory.onclick = function() {
+                    storedArray.push(learningArray[8][1]);
+                  };
+                }
+              }
+            };
+          }
+        }
+        tierOneClicked = true;
+      }
+    }
+
+var results = document.getElementById('results');
+
+results.addEventListener('click', resultsHandler);
+
+function resultsHandler() {
+  var storeArray = JSON.stringify(storedArray);
+  localStorage.setItem('storedArray', storeArray);
+};
+
+var newTree = document.getElementById('refresh');
+
+newTree.addEventListener('click', newTreeHandler);
+
+function newTreeHandler() {
+  var storeArray = JSON.stringify(storedArray);
+  localStorage.setItem('storedArray', storeArray);
+  location.reload();
+};
