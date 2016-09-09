@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- <link type="text/css" rel="stylesheet" href="style.css"> -->
     <link type="text/css" rel="stylesheet" href="sportStyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Permanent+Marker" rel="stylesheet">
     <title>Event Picker</title>
   </head>
   <body>
-    <main id="main">
-      <header>
-        <h1>Event Finder</h1>
-      </header>
 
+    <div id="header">
+      <div class="logo">
+        <h1>Venture!</h2>
+          <p>Get Out There</p>
+      </div>
+
+      <div class="nav">
+        <ul>
+          <li><a href="#">Sports</a></li>
+          <li><a href="#">Cultural</a></li>
+          <li><a href="#">Education</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <main id="main">
       <div class="mainCategory">
         <h2>Sports</h2>
       </div>
@@ -23,10 +35,14 @@
 
       <div id="results">
         <a href="results.html">Go To Your List!</a>
+        <a href="#" id="refresh">Start a New Tree</a>
       </div>
-      <div id="refresh">New Tree</div>
 
     </main>
+
+    <div id="footer">
+    <p>&copy; Copyright Venture! 2016</p>
+    </div>
 
     <script type="text/javascript" src="sports.js"></script>
   </body>

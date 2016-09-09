@@ -1,7 +1,63 @@
+.clearfix {
+  clear: both;
+}
+
+body {
+  background-color: #ffb933;
+}
+
+#header {
+  height: 175px;
+  width: 1290px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #3279ff;
+}
+
+.logo {
+  float: left;
+  margin: 20px;
+  padding-left: 20px;
+  text-align: center;
+}
+
+.logo h1 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 85px;
+  margin-top: 0px;
+  margin-bottom: 2px;
+}
+
+.logo p {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 18px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.nav li {
+  float: right;
+  display: inline-block;
+  background-color: #4cab7c;
+  width: 150px;
+  padding: 5px;
+  padding-right: 20px;
+  margin-top: 105px;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Permanent Marker', cursive;
+}
+
+h3 {
+  font-size: 24px;
+}
+
 #main {
   position: relative;
-  /*background-color: #494949;*/
-  width: 1290px;
+  /*background-color: #e03c30;*/
+  width: 1300px;
   height: 700px;
   margin: 30px auto;
 }
@@ -12,6 +68,7 @@
   text-align: center;
   border: 2px solid black;
   border-radius: 15px;
+  background-color: #4cab7c;
 }
 
 #tier_1 {
@@ -25,6 +82,8 @@
   border: 2px solid black;
   border-radius: 15px;
   display: inline-block;
+  font-family: 'Permanent Marker', cursive;
+  background-color: #4cab7c;
 }
 
 #tier_1 :nth-child(2) {
@@ -44,6 +103,8 @@
   border-radius: 15px;
   display: inline-block;
   margin-right: 30px;
+  font-family: 'Permanent Marker', cursive;
+  background-color: #4cab7c;
 }
 
 .tier_2 div:last-child {
@@ -58,6 +119,8 @@
   border-radius: 15px;
   display: inline-block;
   margin-right: 30px;
+  font-family: 'Permanent Marker', cursive;
+  background-color: #4cab7c;
 }
 
 .tier_3 div:last-child {
@@ -66,7 +129,7 @@
 
 #tier_2-1 {
   position: absolute;
-  top: 296px;
+  top: 265px;
   left: 190px;
   height: 63px;
   width: 530px;
@@ -74,7 +137,7 @@
 
 #tier_2-2 {
   position: absolute;
-  top: 296px;
+  top: 265px;
   left: 380px;
   height: 63px;
   width: 530px;
@@ -82,7 +145,7 @@
 
 #tier_2-3 {
   position: absolute;
-  top: 296px;
+  top: 265px;
   left: 570px;
   height: 63px;
   width: 530px;
@@ -137,17 +200,18 @@
   margin-top: 100px;
 }
 
+#results a {
+  background-color: #4cab7c;
+}
+
 #results {
   position: absolute;
   top: 665px;
-  left: 474px;
+  left: 445px;
 }
 
 #refresh {
-  position: absolute;
-  width: 109.7px;
-  top: 653px;
-  left: 673px;
+  width: 196px;
   color: black;
   border: 2px solid black;
   padding: 10px 15px;
@@ -161,8 +225,25 @@ a {
   border: 2px solid black;
   padding: 10px 15px;
   border-radius: 15px;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 20px;
 }
 
-h3 {
-  font-size: 24px;
+li {
+  margin-right: 30px;
+}
+
+li a {
+  border: none;
+}
+
+#footer {
+  position: relative;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 18px;
+  text-align: center;
+  width: 1290px;
+  margin: auto;
+  padding: 5px;
+  background-color: #3279ff;
 }
